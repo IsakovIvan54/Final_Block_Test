@@ -6,14 +6,14 @@ string[] arrayOut1 = new string[arrayIn1.Length];
 string[] arrayOut2 = new string[arrayIn2.Length];
 string[] arrayOut3 = new string[arrayIn3.Length];
 
-void SecondArrayWithIF(string[] array1, string[] array2)
+void SecondArray(string[] arrayIn, string[] arrayOut)
 {
     int count = 0;
-    for (int i = 0; i < array1.Length; i++)
+    for (int i = 0; i < arrayIn.Length; i++)
     {
-    if(array1[i].Length <= 3)
+    if(arrayIn[i].Length <= 3)
         {
-        array2[count] = array1[i];
+        arrayOut[count] = arrayIn[i];
         count++;
         }
     }
@@ -27,11 +27,11 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
-SecondArrayWithIF(arrayIn1, arrayOut1);
+SecondArray(arrayIn1, arrayOut1);
 PrintArray(arrayOut1);
 
-SecondArrayWithIF(arrayIn2, arrayOut2);
+SecondArray(arrayIn2, arrayOut2);
 PrintArray(arrayOut2);
 
-SecondArrayWithIF(arrayIn3, arrayOut3);
+SecondArray(arrayIn3, arrayOut3);
 PrintArray(arrayOut3);
